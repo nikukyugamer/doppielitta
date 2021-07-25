@@ -6,7 +6,7 @@ module Lita
     class Toro < Handler
       RANDOM_CAT_API_URL = 'https://aws.random.cat/meow'.freeze
 
-      route(/\Aねこ画像.*\Z/, :cat_image, help: { '\Aねこ画像.*\Z' => 'ねこ画像を表示します' })
+      route(/\Aねこ画像.*\Z/, :cat_image, help: { 'ねこ画像(.*)' => 'ねこ画像を表示します' })
 
       def cat_image(response)
         uri = URI(RANDOM_CAT_API_URL)

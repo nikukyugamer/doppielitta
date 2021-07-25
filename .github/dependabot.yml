@@ -1,0 +1,33 @@
+version: 2
+updates:
+  - package-ecosystem: bundler
+    directory: '/'
+    schedule:
+      interval: daily
+      time: '19:00'
+      timezone: Asia/Tokyo
+    open-pull-requests-limit: 20
+    # ignore:
+    #   - dependency-name: wkhtmltopdf-binary
+    #     versions:
+    #       - '>= 0.12.4'
+    #   - dependency-name: rails
+    #     versions:
+    #       - 5.2.4.4
+    #   - dependency-name: config
+    #     versions:
+    #       - 2.2.3
+    #       - 3.0.0
+    #   - dependency-name: puma
+    #     versions:
+    #       - 5.2.0
+    #       - 5.2.1
+    #   - dependency-name: wkhtmltopdf-binary-edge
+    #     versions:
+    #       - '>= 0.12.4.0'
+    #   - dependency-name: wicked_pdf
+    #     versions:
+    #       - '>= 1.4.0'
+    #   - dependency-name: google_drive
+    #     versions:
+    #       - '>= 2.1.12'

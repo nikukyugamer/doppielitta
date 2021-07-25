@@ -1,4 +1,3 @@
-# rubocop:disable Style/FrozenStringLiteralComment, Naming/FileName
 require 'lita'
 
 Lita.load_locales Dir[File.expand_path(
@@ -12,4 +11,3 @@ Lita::Handlers::Toro.template_root File.expand_path(
   File.join('..', '..', 'templates'),
   __FILE__
 )
-# rubocop:enable Style/FrozenStringLiteralComment, Naming/FileName

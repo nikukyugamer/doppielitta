@@ -1,4 +1,3 @@
-# rubocop:disable Style/FrozenStringLiteralComment, Style/Documentation
 require 'net/http'
 require 'json'
 
@@ -32,4 +31,3 @@ module Lita
     end
   end
 end
-# rubocop:enable Style/FrozenStringLiteralComment, Style/Documentation

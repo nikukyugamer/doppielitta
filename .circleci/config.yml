@@ -1,5 +1,8 @@
 version: 2.1
 
+orbs:
+  slack: circleci/slack@4.4.2
+
 executors:
   rails_executor:
     docker:
@@ -88,6 +91,23 @@ jobs:
       # - store_artifacts:
       #     path: /tmp/screenshots
       #     destination: rspec_screenshot
+      - slack/notify:
+          custom: |
+            {
+              "blocks": [
+                {
+                  "type": "section",
+                  "fields": [
+                    {
+                      "type": "plain_text",
+                      "text": "*'doppielitta' CircleCI done.*",
+                      "emoji": true
+                    }
+                  ]
+                }
+              ]
+            }
+          event: always
 
 workflows:
   version: 2

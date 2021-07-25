@@ -1,4 +1,3 @@
-# rubocop:disable Style/FrozenStringLiteralComment, Style/Documentation
 require 'net/http'
 require 'json'
 
@@ -11,6 +10,9 @@ module Lita
 
       def cat_image(response)
         uri = URI(RANDOM_CAT_API_URL)
+
+        # なぜか一度リクエストを挟まないと次が受け付けられないようなので、入れる
+        _dummy_res = Net::HTTP.get_response(uri)
         res = Net::HTTP.get_response(uri)
 
         if res.code != '200'
@@ -23,13 +25,9 @@ module Lita
         reply_text = res_hash['file']
 
         response.reply(reply_text) unless reply_text.nil?
-
-        # なぜか一度リクエストを挟まないと次が受け付けられないようなので、入れる
-        Net::HTTP.get_response(uri)
       end
 
       Lita.register_handler(self)
     end
   end
 end
-# rubocop:enable Style/FrozenStringLiteralComment, Style/Documentation

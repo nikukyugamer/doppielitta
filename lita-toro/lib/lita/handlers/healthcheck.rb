@@ -1,4 +1,3 @@
-# rubocop:disable Style/FrozenStringLiteralComment, Style/Documentation
 module Lita
   module Handlers
     class Healthcheck < Handler
@@ -10,4 +9,3 @@ module Lita
     end
   end
 end
-# rubocop:enable Style/FrozenStringLiteralComment, Style/Documentation

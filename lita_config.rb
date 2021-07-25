@@ -1,4 +1,3 @@
-# rubocop:disable Style/FrozenStringLiteralComment, Style/AsciiComments, Style/ConditionalAssignment
 Lita.configure do |config|
   # The name your robot will use.
   config.robot.name = 'Lita'
@@ -47,4 +46,3 @@ Lita.configure do |config|
   ## documentation for options.
   # config.handlers.some_handler.some_config_key = "value"
 end
-# rubocop:enable Style/FrozenStringLiteralComment, Style/AsciiComments, Style/ConditionalAssignment

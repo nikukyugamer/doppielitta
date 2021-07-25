@@ -14,7 +14,8 @@ tmp/*
 /test/version_tmp/
 
 # Used by dotenv library to load environment variables.
-# .env
+.env
+.envrc
 
 # Ignore Byebug command history file.
 .byebug_history

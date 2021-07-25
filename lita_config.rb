@@ -1,9 +1,12 @@
+# rubocop:disable Style/FrozenStringLiteralComment
 Lita.configure do |config|
   # The name your robot will use.
-  config.robot.name = "Lita"
+  config.robot.name = 'Lita'
 
   # The locale code for the language to use.
-  config.robot.locale = :ja
+  # NOTE: 設定を有効にすると ERROR: translation missing: ja-JP.UTF-8.lita.handler.exception が出てしまう
+  # config.robot.locale = :ja
+  # config.robot.default_locale = 'ja'
 
   # The severity of messages to log. Options are:
   # :debug, :info, :warn, :error, :fatal
@@ -23,7 +26,12 @@ Lita.configure do |config|
   ## Example: Set options for the chosen adapter.
   # config.adapter.username = "myname"
   # config.adapter.password = "secret"
+
   config.adapters.slack.token = ENV['SLACK_API_KEY']
+  # config.adapters.slack.link_names = true
+  # config.adapters.slack.parse = 'full'
+  # config.adapters.slack.unfurl_links = false
+  # config.adapters.slack.unfurl_media = false
 
   ## Example: Set options for the Redis connection.
   config.redis.host = ENV['REDIS_URL']
@@ -33,3 +41,4 @@ Lita.configure do |config|
   ## documentation for options.
   # config.handlers.some_handler.some_config_key = "value"
 end
+# rubocop:enable Style/FrozenStringLiteralComment

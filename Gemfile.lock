@@ -1,3 +1,9 @@
+PATH
+  remote: lita-toro
+  specs:
+    lita-toro (0.1.0)
+      lita
+
 GEM
   remote: https://rubygems.org/
   specs:
@@ -71,6 +77,7 @@ PLATFORMS
 DEPENDENCIES
   lita
   lita-slack
+  lita-toro!
 
 BUNDLED WITH
    2.2.22

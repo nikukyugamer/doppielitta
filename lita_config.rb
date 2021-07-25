@@ -1,4 +1,4 @@
-# rubocop:disable Style/FrozenStringLiteralComment
+# rubocop:disable Style/FrozenStringLiteralComment, Style/AsciiComments
 Lita.configure do |config|
   # The name your robot will use.
   config.robot.name = 'Lita'
@@ -34,11 +34,14 @@ Lita.configure do |config|
   # config.adapters.slack.unfurl_media = false
 
   ## Example: Set options for the Redis connection.
-  config.redis.host = ENV['REDIS_URL']
+  # config.redis.host = ENV['REDIS_URL']
   # config.redis.port = 1234
+  # 下の二つの環境変数の名前は Heroku での予約語である
+  config.redis[:url] = ENV['REDISTOGO_URL']
+  config.http.port = ENV['PORT']
 
   ## Example: Set configuration for any loaded handlers. See the handler's
   ## documentation for options.
   # config.handlers.some_handler.some_config_key = "value"
 end
-# rubocop:enable Style/FrozenStringLiteralComment
+# rubocop:enable Style/FrozenStringLiteralComment, Style/AsciiComments

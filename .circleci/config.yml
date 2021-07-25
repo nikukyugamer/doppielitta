@@ -26,7 +26,7 @@ jobs:
   build:
     executor:
       name: rails_executor
-      ruby_version_tag: '3.0.2'
+      ruby_version_tag: '2.6.8'
       pg_version_tag: '13.2'
     environment:
       TZ: 'Asia/Tokyo'
@@ -56,9 +56,9 @@ jobs:
           command: |
             which ruby > /tmp/doppielitta/which_ruby.txt
       - run:
-          name: Install the latest Bundler
+          name: Install the appropriate version's Bundler
           command: |
-            gem install bundler
+            gem install bundler -v 1.17.3
       - run:
           name: Bundle install
           command: |

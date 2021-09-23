@@ -38,10 +38,10 @@ jobs:
       #   continue-on-error: true
       #   run: |
       #     brakeman -f sarif -o output.sarif.json .
-      - name: Scan
-        continue-on-error: true
-        run: |
-          brakeman
+      # - name: Scan
+      #   continue-on-error: true
+      #   run: |
+      #     brakeman
     # Upload the SARIF file generated in the previous step
     # - name: Upload SARIF
     #   uses: github/codeql-action/upload-sarif@v1

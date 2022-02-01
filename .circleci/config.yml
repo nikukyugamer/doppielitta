@@ -1,7 +1,7 @@
 version: 2.1
 
 orbs:
-  slack: circleci/slack@4.6.2
+  slack: circleci/slack@4.6.3
 
 executors:
   rails_executor:

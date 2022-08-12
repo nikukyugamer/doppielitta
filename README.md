@@ -10,8 +10,6 @@
 
 ## Heroku にデプロイする
 
-- [Redis To Go](https://elements.heroku.com/addons/redistogo) を使う
 - 以下の環境変数の設定は必須
-  - `REDISTOGO_URL`（ただしこの値は Redis To Go をインストールすると自動で生成される）
   - `SLACK_API_KEY`
     - `xbox-12345-67890-abXbox83Xbox`

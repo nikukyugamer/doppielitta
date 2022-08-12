@@ -33,11 +33,8 @@ Lita.configure do |config|
   # config.adapters.slack.unfurl_media = false
 
   ## Example: Set options for the Redis connection.
-  # config.redis.host = ENV['REDIS_URL']
-  # config.redis.port = 1234
-
-  # REDISTOGO_URL は Redis To Go における事実上の予約語である
-  ENV['REDIS_URL'].nil? ? config.redis[:url] = ENV['REDISTOGO_URL'] : config.redis[:url] = ENV['REDIS_URL']
+  config.redis.host = ENV['REDIS_HOST']
+  config.redis.port = ENV['REDIS_PORT']
 
   # PORT は Heroku における予約語である
   config.http.port = ENV['PORT']

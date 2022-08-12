@@ -1,3 +1,5 @@
+# Heroku で Redis の提供が終了したのでこのリポジトリの更新を終了します
+
 # Doppielitta
 
 ## これは何？
